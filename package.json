@@ -1,0 +1,39 @@
+{
+  "name": "pi-rainbow-footer",
+  "version": "0.1.0",
+  "description": "Animated rainbow footer for Pi with session stats, cache hit rate, and optional Codex quota display.",
+  "type": "module",
+  "license": "MIT",
+  "author": "zgj-119",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgj-119/pi-rainbow-footer.git"
+  },
+  "homepage": "https://github.com/zgj-119/pi-rainbow-footer#readme",
+  "bugs": "https://github.com/zgj-119/pi-rainbow-footer/issues",
+  "keywords": ["pi-package", "pi-extension", "rainbow", "footer", "terminal", "codex"],
+  "engines": { "node": ">=22.19.0" },
+  "files": ["rainbow-footer.ts", "assets/preview.svg", "README.md", "README.en.md", "LICENSE", "NOTICE.md"],
+  "pi": {
+    "extensions": ["./rainbow-footer.ts"]
+  },
+  "scripts": {
+    "test": "node --import tsx --test tests/rainbow-footer.test.ts",
+    "typecheck": "tsc --noEmit",
+    "preview": "tsx scripts/preview.ts",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "0.85.1",
+    "@earendil-works/pi-coding-agent": "0.85.1",
+    "@earendil-works/pi-tui": "0.85.1",
+    "@types/node": "22.19.19",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
